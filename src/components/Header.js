@@ -11,7 +11,7 @@ const Header = ({title,onAdd,showAdd}) =>{
 
     const getTotalStocks = async () => {
         //Cannon do https since server is not configured for it
-        const response = await fetch("http://localhost:8000/getTotalStocks")
+        const response = await fetch("/getTotalStocks")
         const stocks = await response.json()
         console.log(stocks)
         setTotalStocks(stocks.totalStocks)
